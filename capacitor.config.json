@@ -1,0 +1,11 @@
+{
+  "appId": "io.cybev.app",
+  "appName": "CYBEV",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "server": {
+    "url": "https://cybev.io",
+    "cleartext": false,
+    "allowNavigation": ["api.cybev.io", "*.vercel.app"]
+  }
+}
