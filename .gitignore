@@ -1,0 +1,7 @@
+node_modules
+android/.gradle
+android/.idea
+android/app/build
+ios/App/build
+.DS_Store
+*.log
