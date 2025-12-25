@@ -1,0 +1,77 @@
+/* CYBEV Mobile (Fold/Small screens) responsive hardening
+   Drop-in CSS to prevent horizontal overflow and keep content inside viewport.
+*/
+
+:root {
+  /* dynamic viewport vars set by responsive.js */
+  --vw: 100vw;
+  --vh: 100vh;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Ensure the main app root can't exceed viewport */
+#root, #app, ion-app, ion-content, .app, .app-root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Media should never push layout wider */
+img, svg, video, canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Common offenders */
+pre, code {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Safer touch targets */
+button, a, input, select, textarea {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  touch-action: manipulation;
+}
+
+/* Fold + small front screen tuning */
+@media (max-width: 520px) {
+  /* reduce aggressive padding/margins that can cause clipping */
+  .container, .content, .page, .wrapper {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 100% !important;
+  }
+
+  /* Buttons/cards should wrap instead of overflow */
+  .row, .grid, .flex, .buttons, .actions {
+    flex-wrap: wrap !important;
+  }
+
+  /* Large headings can overflow; allow wrapping */
+  h1, h2, h3 {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Handle safe areas (notches, rounded corners) */
+body {
+  padding-top: env(safe-area-inset-top);
+  padding-right: env(safe-area-inset-right);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+}
