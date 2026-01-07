@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "811271095194",
+    "project_id": "cybev-b31a4",
+    "storage_bucket": "cybev-b31a4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:811271095194:android:b669f17e667ca16d84b023",
+        "android_client_info": {
+          "package_name": "io.cybev.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoYgyPzzUr-myV4vJTsAbl3qdZ0cs57do"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
