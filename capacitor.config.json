@@ -6,6 +6,77 @@
   "server": {
     "url": "https://cybev.io",
     "cleartext": false,
-    "allowNavigation": ["api.cybev.io", "*.vercel.app"]
+    "allowNavigation": [
+      "api.cybev.io",
+      "*.vercel.app",
+      "*.mux.com",
+      "*.cloudinary.com",
+      "accounts.google.com",
+      "*.facebook.com",
+      "*.flutterwave.com",
+      "*.paystack.co",
+      "*.hubtel.com"
+    ]
+  },
+  "plugins": {
+    "PushNotifications": {
+      "presentationOptions": ["badge", "sound", "alert"]
+    },
+    "SplashScreen": {
+      "launchShowDuration": 2000,
+      "launchAutoHide": true,
+      "backgroundColor": "#7c3aed",
+      "androidSplashResourceName": "splash",
+      "androidScaleType": "CENTER_CROP",
+      "showSpinner": true,
+      "androidSpinnerStyle": "small",
+      "iosSpinnerStyle": "small",
+      "spinnerColor": "#ffffff"
+    },
+    "StatusBar": {
+      "style": "DARK",
+      "backgroundColor": "#7c3aed"
+    },
+    "Keyboard": {
+      "resize": "body",
+      "style": "DARK",
+      "resizeOnFullScreen": true
+    },
+    "LocalNotifications": {
+      "smallIcon": "ic_stat_icon_config_sample",
+      "iconColor": "#7c3aed",
+      "sound": "beep.wav"
+    },
+    "App": {
+      "launchUrl": "https://cybev.io"
+    },
+    "Browser": {
+      "android": {
+        "closeButtonColor": "#7c3aed"
+      }
+    },
+    "CapacitorHttp": {
+      "enabled": true
+    },
+    "CapacitorCookies": {
+      "enabled": true
+    }
+  },
+  "android": {
+    "allowMixedContent": false,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": false,
+    "appendUserAgent": "CYBEV-Mobile/1.1.0",
+    "backgroundColor": "#7c3aed",
+    "useLegacyBridge": false,
+    "overrideUserAgent": null
+  },
+  "ios": {
+    "contentInset": "always",
+    "allowsLinkPreview": true,
+    "scrollEnabled": true,
+    "appendUserAgent": "CYBEV-Mobile/1.1.0",
+    "backgroundColor": "#7c3aed",
+    "preferredContentMode": "mobile"
   }
 }
